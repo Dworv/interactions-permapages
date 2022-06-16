@@ -19,5 +19,5 @@ base = Base(
     packages="interactions.ext.persistence",
 )
 
-def setup(bot, cipher_key=None):
+def setup(bot):
     return PermaPages(bot)
