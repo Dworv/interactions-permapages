@@ -1,8 +1,6 @@
 from interactions import Extension
 
-class PermaPages:
+class PermaPages(Extension):
     """
     The main class for the PermaPages extension.
     """
-    def __init__(self, bot):
-        self.bot = bot
