@@ -1,3 +1,7 @@
+# Only allow the template toml
+interactions/ext/permapages/paginators/*
+!interactions/ext/permapages/paginators/template_paginator.toml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,0 +1,9 @@
+select_menu = true
+
+[[pages]]
+    content = "This is not an embed but don't worry page we still love you"
+
+[[pages]]
+    title = "This is an embed"
+    description = "This is not just any embed, but an especially regular embed"
+    color = "0x00ff00" # there may be a better way to do this in toml
