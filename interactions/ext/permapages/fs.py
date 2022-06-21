@@ -1,7 +1,8 @@
 from pathlib import Path
 from sys import modules
-from tomli import load, dump
 from typing import Union
+
+from yaml import load, dump, CLoader, CDumper
 
 
 class PagesFolder:
@@ -22,13 +23,11 @@ class PagesFolder:
         """
         Get a page from the paginators folder.
         """
-        path = self.path / (paginator + ".toml")
+        path = self.path / (paginator + ".yaml")
         if not path.exists():
             return None
         with open(path, "rb") as file:
-            paginator: dict = load(file)
-            if page not in paginator["pages"]:
+            paginator: dict = load(file, CLoader)
+            if len(paginator) < page:
                 return None
             return paginator["pages"][page]
-        
-        
